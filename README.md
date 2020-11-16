@@ -7,6 +7,6 @@ WASD - move
 Mouse - look around  
 Shift - run  
 Space - fly  
-E - slow down
-R - speed up
-G - fly forward but look around
+E - slow down  
+R - speed up  
+G - fly forward but look around  
