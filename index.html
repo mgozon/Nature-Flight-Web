@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Infinite Maze</title>
+    <title>Unity WebGL Player | Nature Flight</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -16,25 +16,22 @@
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
-      <div id="unity-mobile-warning">
-        WebGL builds are not supported on mobile devices.
-      </div>
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Infinite Maze</div>
+        <div id="unity-build-title">Nature Flight</div>
       </div>
     </div>
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Maze Test Build 2.loader.js";
+      var loaderUrl = buildUrl + "/Nature Flight Test Build.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Maze Test Build 2.data.gz",
-        frameworkUrl: buildUrl + "/Maze Test Build 2.framework.js.gz",
-        codeUrl: buildUrl + "/Maze Test Build 2.wasm.gz",
+        dataUrl: buildUrl + "/Nature Flight Test Build.data",
+        frameworkUrl: buildUrl + "/Nature Flight Test Build.framework.js",
+        codeUrl: buildUrl + "/Nature Flight Test Build.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Marcus Gozon",
-        productName: "Infinite Maze",
+        productName: "Nature Flight",
         productVersion: "0.1",
       };
 
@@ -43,15 +40,10 @@
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var mobileWarning = document.querySelector("#unity-mobile-warning");
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
-        mobileWarning.style.display = "block";
-        setTimeout(() => {
-          mobileWarning.style.display = "none";
-        }, 5000);
       } else {
         canvas.style.width = "960px";
         canvas.style.height = "600px";
